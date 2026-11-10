@@ -1,0 +1,31 @@
+{
+  "_comment": "Единый прайс: его читают и бот, и Mini App. Меняешь цены здесь, перезапускаешь бота (или /reload) и заново выкладываешь папку webapp. usdt — цена при оплате криптой, gold — голдой.",
+  "ranks": [
+    {"id": "phoenix",  "name": "Феникс",  "emoji": "🔥"},
+    {"id": "ranger",   "name": "Ренджер", "emoji": "🎯"},
+    {"id": "champion", "name": "Чемпион", "emoji": "🏆"},
+    {"id": "master",   "name": "Мастер",  "emoji": "💠"},
+    {"id": "elite",    "name": "Элита",   "emoji": "👑"},
+    {"id": "legend",   "name": "Легенда", "emoji": "🌍"}
+  ],
+  "steps": [
+    {"from": "phoenix",  "to": "ranger",   "usdt": 1.0, "gold": 100},
+    {"from": "ranger",   "to": "champion", "usdt": 1.2, "gold": 120},
+    {"from": "champion", "to": "master",   "usdt": 1.5, "gold": 150},
+    {"from": "master",   "to": "elite",    "usdt": 1.9, "gold": 200},
+    {"from": "elite",    "to": "legend",   "usdt": 3.2, "gold": 330}
+  ],
+  "bundle": {"from": "phoenix", "to": "legend", "usdt": 7.9, "gold": 820},
+  "modes": [
+    {"id": "mm",      "name": "Соревновательный (ММ)", "short": "ММ",        "mult": 1.0},
+    {"id": "allies",  "name": "Союзники",              "short": "Союзники",  "mult": 0.9},
+    {"id": "wingman", "name": "Напарники 2×2",         "short": "Напарники", "mult": 1.0},
+    {"id": "duels",   "name": "Дуэли 1×1",             "short": "Дуэли",     "mult": 1.15}
+  ],
+  "types": [
+    {"id": "solo",  "name": "Solo", "desc": "Бустер играет на твоём аккаунте", "mult": 1.0},
+    {"id": "party", "name": "Party", "desc": "Играешь вместе с бустером, аккаунт не передаёшь", "mult": 1.15}
+  ],
+  "crypto": {"assets": ["USDT", "TON"]},
+  "rounding": {"usdt": 0.1, "gold": 5}
+}
